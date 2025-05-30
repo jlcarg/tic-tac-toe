@@ -13,6 +13,4 @@ player2.make_a_play(board)
 board.display_board
 player1.make_a_play(board)
 board.display_board
-# p board.board_plays
-# p board.board_plays[0].uniq == 1
 board.check_win
