@@ -13,9 +13,13 @@ class Board
   end
 
   def check_win
-    check_win_row
-    check_win_column
-    check_win_diagonal
+    if check_win_row == true
+      true
+    elsif check_win_column == true
+      true
+    else
+      check_win_diagonal == true
+    end
   end
 
   def check_win_row
@@ -23,6 +27,8 @@ class Board
       if array.uniq.size == 1 && array.include?('_') == false && array.include?(' ') == false
         puts "We have a winner #{array[0].player_name}"
         return true
+      else
+        false
       end
     end
   end
@@ -37,6 +43,8 @@ class Board
     elsif board_plays[0][2] == board_plays[1][2] && board_plays[0][2] == board_plays[2][2]
       puts "We have a winner! #{board_plays[0][2].player_name}"
       true
+    else
+      false
     end
   end
 
@@ -47,6 +55,8 @@ class Board
     elsif board_plays[0][2] == board_plays[1][1] && board_plays[0][2] == board_plays[2][0]
       puts "We have a winner! #{board_plays[0][2].player_name}"
       true
+    else
+      false
     end
   end
 end
