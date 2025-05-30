@@ -21,7 +21,8 @@ class Board
   def check_win_row
     @board_plays.each do |array|
       if array.uniq.size == 1 && array.include?('_') == false && array.include?(' ') == false
-        return puts "We have a winner #{array[0].player_name}"
+        puts "We have a winner #{array[0].player_name}"
+        return true
       end
     end
   end
@@ -29,18 +30,23 @@ class Board
   def check_win_column
     if board_plays[0][0] == board_plays[1][0] && board_plays[0][0] == board_plays[2][0]
       puts "We have a winner! #{board_plays[0][0].player_name}"
+      true
     elsif board_plays[0][1] == board_plays[1][1] && board_plays[0][1] == board_plays[2][1]
       puts "We have a winner! #{board_plays[0][1].player_name}"
+      true
     elsif board_plays[0][2] == board_plays[1][2] && board_plays[0][2] == board_plays[2][2]
       puts "We have a winner! #{board_plays[0][2].player_name}"
+      true
     end
   end
 
   def check_win_diagonal
     if board_plays[0][0] == board_plays[1][1] && board_plays[0][0] == board_plays[2][2]
       puts "We have a winner! #{board_plays[0][0].player_name}"
+      true
     elsif board_plays[0][2] == board_plays[1][1] && board_plays[0][2] == board_plays[2][0]
       puts "We have a winner! #{board_plays[0][2].player_name}"
+      true
     end
   end
 end

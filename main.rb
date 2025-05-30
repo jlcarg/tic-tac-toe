@@ -13,5 +13,7 @@ player2.make_a_play(board)
 board.display_board
 player1.make_a_play(board)
 board.display_board
+player1.make_a_play(board)
+board.display_board
 p board.number_of_plays
-board.check_win
+p board.check_win
