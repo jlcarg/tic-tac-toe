@@ -18,6 +18,7 @@ class Player
   def make_a_play(board)
     play = choose_a_play
     board.board_plays[play[0]][play[1]] = self
+    board.number_of_plays += 1
   end
 
   def to_s
