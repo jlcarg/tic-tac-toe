@@ -59,4 +59,8 @@ class Board
       false
     end
   end
+
+  def valid_move?(play)
+    ['_', ' '].include? @board_plays[play[0]][play[1]]
+  end
 end
