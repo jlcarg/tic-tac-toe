@@ -1,5 +1,5 @@
-require_relative 'board'
-require_relative 'player'
+require_relative 'lib/board'
+require_relative 'lib/player'
 
 board = Board.new
 
