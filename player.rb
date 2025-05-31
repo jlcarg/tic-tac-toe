@@ -30,7 +30,7 @@ class Player
     puts "#{player_name} turn to play!"
     play = [choose_row, choose_column]
     until board.valid_move?(play)
-      puts 'Someone already made that play, please select a valid play'
+      puts "\n #{play}: Someone already made that play, please select a valid play"
       play = [choose_row, choose_column]
     end
     board.board_plays[play[0]][play[1]] = self
