@@ -3,10 +3,14 @@ require_relative 'player'
 
 board = Board.new
 
-player1 = Player.new('X', 'player1')
-player2 = Player.new('O', 'player2')
+player1 = Player.new('X', 'Player 1')
+player2 = Player.new('O', 'Player 2')
 
 player_turn = player1
+
+puts "\nTIC TAC TOE on the command line"
+puts 'by jlcarg'
+puts " \n"
 
 board.display_board
 

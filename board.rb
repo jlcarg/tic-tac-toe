@@ -7,9 +7,11 @@ class Board
   end
 
   def display_board
-    @board_plays.each do |array|
-      puts array.join('|')
+    puts "\n0 1 2"
+    @board_plays.each_with_index do |array, idx|
+      puts "#{array.join('|')} #{idx}"
     end
+    puts "\n"
   end
 
   def check_win

@@ -27,6 +27,7 @@ class Player
   end
 
   def make_a_play(board)
+    puts "#{player_name} turn to play!"
     play = [choose_row, choose_column]
     until board.valid_move?(play)
       puts 'Someone already made that play, please select a valid play'
