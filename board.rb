@@ -1,6 +1,5 @@
 class Board
-  attr_accessor :board_plays
-  attr_reader :number_of_plays
+  attr_accessor :board_plays, :number_of_plays
 
   def initialize
     @board_plays = [['_', '_', '_'], ['_', '_', '_'], [' ', ' ', ' ']]
